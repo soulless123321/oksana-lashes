@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
     <title>Оксана Григорьева · Ресницы и брови · Апатиты</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
 </head>
 <body>
     <header class="header">
@@ -41,7 +43,8 @@
                     <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" class="btn btn--gold btn--large" target="_blank">Записаться онлайн</a>
                 </div>
                 <div class="hero__image">
-                    <div class="image-placeholder hero-placeholder">
+                    <img src="images/hero/oksana-main.jpg" alt="Оксана Григорьева, мастер по ресницам и бровям" class="hero-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="image-placeholder hero-placeholder" style="display: none;">
                         <i class="fas fa-eye"></i>
                         <span>Оксана Григорьева</span>
                     </div>
@@ -110,10 +113,11 @@
             <div class="container">
                 <h2 class="section-title">Последние работы</h2>
                 <div class="portfolio-preview__grid">
-                    <div class="portfolio-item"><div class="image-placeholder">классика</div></div>
-                    <div class="portfolio-item"><div class="image-placeholder">2D объем</div></div>
-                    <div class="portfolio-item"><div class="image-placeholder">ламинирование</div></div>
-                    <div class="portfolio-item"><div class="image-placeholder">3D эффект</div></div>
+                    <!-- Замените имена файлов на свои. Фото автоматически обрежутся под квадрат -->
+                    <div class="portfolio-item"><img src="images/portfolio/classic1.jpg" alt="Классическое наращивание" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="image-placeholder" style="display:none;">классика</div></div>
+                    <div class="portfolio-item"><img src="images/portfolio/volume2d.jpg" alt="2D объем" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="image-placeholder" style="display:none;">2D объем</div></div>
+                    <div class="portfolio-item"><img src="images/portfolio/lam-res.jpg" alt="Ламинирование ресниц" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="image-placeholder" style="display:none;">ламинирование</div></div>
+                    <div class="portfolio-item"><img src="images/portfolio/volume3d.jpg" alt="3D эффект" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="image-placeholder" style="display:none;">3D эффект</div></div>
                 </div>
                 <div class="text-center">
                     <a href="portfolio.html" class="btn btn--outline">Смотреть всё портфолио</a>
@@ -129,7 +133,7 @@
                     <address class="contact-details">
                         <p><i class="fas fa-map-pin"></i> ул. Дзержинского, д. 35, офис 406, Апатиты</p>
                         <p><i class="fas fa-phone-alt"></i> <a href="tel:+79211695704">+7 (921) 169-57-04</a></p>
-                        <p><i class="fab fa-avito"></i> <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" target="_blank">Профиль на Avito</a></p>
+                        <p><i class="fas fa-store"></i> <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" target="_blank">Профиль на Avito</a></p>
                     </address>
                     <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" class="btn btn--gold" target="_blank">Записаться на Avito</a>
                 </div>
@@ -145,13 +149,18 @@
 
     <footer class="footer">
         <div class="container footer__container">
-            <p>© 2025 Оксана Григорьева. Все права защищены.</p>
+            <div class="footer__legal">
+                <p>© 2025 Оксана Григорьева. Все права защищены.</p>
+                <p class="footer__inn">Самозанятая Григорьева Оксана Владимировна<br>ИНН 510101213118</p>
+                <p><a href="privacy.html" class="footer__privacy-link">Политика конфиденциальности</a></p>
+            </div>
             <div class="footer__links">
-                <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" target="_blank"><i class="fab fa-avito"></i> Avito</a>
+                <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" target="_blank"><i class="fas fa-store"></i> Avito</a>
                 <a href="tel:+79211695704"><i class="fas fa-phone-alt"></i> Позвонить</a>
             </div>
         </div>
     </footer>
+
 
     <script>
         const toggleBtn = document.querySelector('.mobile-toggle');
