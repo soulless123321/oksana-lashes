@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги · Оксана Григорьева</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">Оксана Григорьева</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="services.html" class="nav__link active">Услуги</a></li>
+                    <li><a href="price.html" class="nav__link">Прайс</a></li>
+                    <li><a href="portfolio.html" class="nav__link">Портфолио</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__contact">
+                <a href="tel:+79211695704" class="header__phone">+7 (921) 169-57-04</a>
+                <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" class="btn btn--gold btn--small" target="_blank">Записаться</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Меню"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header section">
+            <div class="container">
+                <h1 class="page-title">Услуги</h1>
+                <p class="page-subtitle">Качественные процедуры для вашего образа</p>
+            </div>
+        </section>
+
+        <section class="services-detail section bg-light">
+            <div class="container">
+                <div class="service-block">
+                    <h2>Наращивание ресниц</h2>
+                    <p>Создаю выразительный взгляд с помощью безопасных материалов. Эффект держится до 4 недель.</p>
+                    <ul>
+                        <li><strong>Классика</strong> — по одной ресничке на каждую натуральную. Натуральный эффект.</li>
+                        <li><strong>1.5D, 2D, 3D</strong> — объёмное наращивание для более густых и пушистых ресниц.</li>
+                    </ul>
+                </div>
+
+                <div class="service-block">
+                    <h2>Ламинирование ресниц</h2>
+                    <p>Процедура питает, придаёт изгиб и насыщенный цвет ресницам. Идеально для тех, кто хочет отказаться от туши.</p>
+                </div>
+
+                <div class="service-block">
+                    <h2>Ламинирование бровей</h2>
+                    <p>Укладка и фиксация непослушных волосков бровей. Долговременный результат до 2 месяцев.</p>
+                </div>
+
+                <div class="text-center">
+                    <a href="price.html" class="btn btn--gold">Посмотреть цены</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__legal">
+                <p>© 2025 Оксана Григорьева. Все права защищены.</p>
+                <p class="footer__inn">Самозанятая Григорьева Оксана Павловна<br>ИНН 510101213118</p>
+                <p><a href="privacy.html" class="footer__privacy-link">Политика конфиденциальности</a></p>
+            </div>
+            <div class="footer__links">
+                <a href="https://t.me/grigosha2607" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://vk.com/grigosha2607" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a>
+                <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" target="_blank"><i class="fas fa-store"></i> Avito</a>
+                <a href="tel:+79211695704"><i class="fas fa-phone-alt"></i> Позвонить</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('.nav');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
