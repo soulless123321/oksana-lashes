@@ -761,3 +761,111 @@ ul, ol {
     .gallery-grid { grid-template-columns: 1fr; }
     .privacy-text { padding: 25px; }
 }
+/* ===== КАРУСЕЛЬ ПОРТФОЛИО (ТОЧКИ, БЕЗ СТРЕЛОК) ===== */
+.portfolio-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 20px auto 0;
+}
+
+.portfolio-carousel input[type="radio"] {
+    display: none;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-md);
+    margin: 0 -8px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+    flex-shrink: 0;
+    padding: 0 8px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    display: block;
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===== ДЕСКТОП (3 видимых) ===== */
+.carousel-track {
+    width: calc(100% * 6 / 3); /* 200% */
+}
+.carousel-slide {
+    width: calc(100% / 6);      /* 16.666% */
+}
+#car-slide1:checked ~ .carousel-viewport .carousel-track { transform: translateX(0); }
+#car-slide2:checked ~ .carousel-viewport .carousel-track { transform: translateX(-16.666%); }
+#car-slide3:checked ~ .carousel-viewport .carousel-track { transform: translateX(-33.333%); }
+#car-slide4:checked ~ .carousel-viewport .carousel-track { transform: translateX(-50%); }
+
+/* ===== ПЛАНШЕТ (2 видимых) ===== */
+@media (max-width: 1024px) {
+    .carousel-track {
+        width: calc(100% * 6 / 2); /* 300% */
+    }
+    .carousel-slide {
+        width: calc(100% / 6);
+    }
+    #car-slide1:checked ~ .carousel-viewport .carousel-track { transform: translateX(0); }
+    #car-slide2:checked ~ .carousel-viewport .carousel-track { transform: translateX(-16.666%); }
+    #car-slide3:checked ~ .carousel-viewport .carousel-track { transform: translateX(-33.333%); }
+    #car-slide4:checked ~ .carousel-viewport .carousel-track { transform: translateX(-50%); }
+}
+
+/* ===== МОБИЛЬНЫЕ (1 видимый) ===== */
+@media (max-width: 640px) {
+    .carousel-track {
+        width: calc(100% * 6 / 1); /* 600% */
+    }
+    .carousel-slide {
+        width: calc(100% / 6);
+    }
+    #car-slide1:checked ~ .carousel-viewport .carousel-track { transform: translateX(0); }
+    #car-slide2:checked ~ .carousel-viewport .carousel-track { transform: translateX(-16.666%); }
+    #car-slide3:checked ~ .carousel-viewport .carousel-track { transform: translateX(-33.333%); }
+    #car-slide4:checked ~ .carousel-viewport .carousel-track { transform: translateX(-50%); }
+}
+
+/* ===== ТОЧКИ ===== */
+.carousel-dots {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.car-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gray-light);
+    border: 1px solid var(--gold);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.car-dot:hover {
+    background: var(--gold-light);
+}
+
+/* Активная точка */
+#car-slide1:checked ~ .carousel-dots label[for="car-slide1"],
+#car-slide2:checked ~ .carousel-dots label[for="car-slide2"],
+#car-slide3:checked ~ .carousel-dots label[for="car-slide3"],
+#car-slide4:checked ~ .carousel-dots label[for="car-slide4"] {
+    background: var(--gold);
+    transform: scale(1.3);
+}

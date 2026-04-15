@@ -104,18 +104,36 @@
             </div>
         </section>
 
-        <!-- Портфолио (кратко) -->
+        <!-- Последние работы (карусель с точками, без стрелок) -->
         <section class="portfolio-preview section">
             <div class="container">
                 <h2 class="section-title">Последние работы</h2>
-                <div class="portfolio-preview__grid">
-                    <div class="portfolio-item"><img src="images/portfolio/classic1.jpg" alt="Классическое наращивание" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="image-placeholder" style="display:none;">классика</div></div>
-                    <div class="portfolio-item"><img src="images/portfolio/volume2d.jpg" alt="2D объем" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="image-placeholder" style="display:none;">2D объем</div></div>
-                    <div class="portfolio-item"><img src="images/portfolio/lam-res.jpg" alt="Ламинирование ресниц" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="image-placeholder" style="display:none;">ламинирование</div></div>
-                    <div class="portfolio-item"><img src="images/portfolio/volume3d.jpg" alt="3D эффект" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="image-placeholder" style="display:none;">3D эффект</div></div>
-                </div>
-                <div class="text-center">
-                    <a href="portfolio.html" class="btn btn--outline">Смотреть всё портфолио</a>
+
+                <div class="portfolio-carousel">
+                    <!-- 4 шага (radio) для 6 слайдов при 3 видимых -->
+                    <input type="radio" name="carousel" id="car-slide1" checked>
+                    <input type="radio" name="carousel" id="car-slide2">
+                    <input type="radio" name="carousel" id="car-slide3">
+                    <input type="radio" name="carousel" id="car-slide4">
+
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="images/portfolio/classic1.jpg" alt="Классика" loading="lazy"></div>
+                            <div class="carousel-slide"><img src="images/portfolio/volume1.5d.jpg" alt="1.5D" loading="lazy"></div>
+                            <div class="carousel-slide"><img src="images/portfolio/volume2d.jpg" alt="2D объем" loading="lazy"></div>
+                            <div class="carousel-slide"><img src="images/portfolio/volume3d.jpg" alt="3D эффект" loading="lazy"></div>
+                            <div class="carousel-slide"><img src="images/portfolio/lam-res.jpg" alt="Ламинирование ресниц" loading="lazy"></div>
+                            <div class="carousel-slide"><img src="images/portfolio/lam-brow.jpg" alt="Ламинирование бровей" loading="lazy"></div>
+                        </div>
+                    </div>
+
+                    <!-- Только точки -->
+                    <div class="carousel-dots">
+                        <label for="car-slide1" class="car-dot"></label>
+                        <label for="car-slide2" class="car-dot"></label>
+                        <label for="car-slide3" class="car-dot"></label>
+                        <label for="car-slide4" class="car-dot"></label>
+                    </div>
                 </div>
             </div>
         </section>
