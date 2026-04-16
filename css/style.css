@@ -832,3 +832,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.about-master__list--centered {
+  max-width: 600px;
+  margin-inline: auto;
+}
