@@ -610,3 +610,225 @@ ul, ol { list-style: none; }
   .btn--large { padding: 0.9em 2em; }
   .privacy-text { padding: 1.5rem; }
 }
+/* ===== ВИЗУАЛЬНЫЕ УЛУЧШЕНИЯ (ТОЛЬКО CSS) ===== */
+
+/* 1. Мягкий радиальный градиент на фоне */
+body {
+  background: 
+    radial-gradient(circle at 20% 15%, rgba(212, 175, 55, 0.025) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.015) 0%, transparent 50%),
+    var(--white);
+  background-attachment: fixed;
+}
+
+/* 2. Hover‑эффект для карточек услуг и преимуществ */
+.feature-card,
+.service-card {
+  transition: transform 0.3s cubic-bezier(0.2, 0.0, 0.0, 1), 
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.feature-card:hover,
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.12), 
+              0 0 0 1px rgba(212, 175, 55, 0.15);
+  border-color: transparent;
+}
+
+/* 3. Плавное появление секций при загрузке (без JS) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+.features,
+.services-preview,
+.portfolio-preview,
+.contact-cta {
+  animation: fadeInUp 0.7s ease-out forwards;
+  opacity: 0;
+}
+
+/* Каскадное появление */
+.features            { animation-delay: 0.1s; }
+.services-preview    { animation-delay: 0.2s; }
+.portfolio-preview   { animation-delay: 0.3s; }
+.contact-cta         { animation-delay: 0.4s; }
+
+/* 4. Улучшенная кнопка "Записаться" (более выразительная) */
+.btn--gold {
+  background: linear-gradient(135deg, var(--gold) 0%, #e6c44d 100%);
+  color: var(--black);
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25), 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: none;
+  transition: transform 0.2s ease, 
+              box-shadow 0.3s ease, 
+              background 0.3s ease;
+}
+
+.btn--gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(212, 175, 55, 0.35), 0 4px 8px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #e6c44d 0%, var(--gold) 100%);
+  color: var(--black);
+}
+
+/* 5. Аккуратное увеличение фото в портфолио при наведении */
+.gallery-item img,
+.carousel__slide img {
+  transition: transform 0.4s cubic-bezier(0.2, 0.0, 0.0, 1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.carousel__slide:hover img {
+  transform: scale(1.02);
+}
+
+/* На мобильных отключаем анимации появления (чтобы не мешали быстрому скроллу) */
+@media (max-width: 768px) {
+  .hero,
+  .features,
+  .services-preview,
+  .portfolio-preview,
+  .contact-cta {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .btn--gold:hover {
+    transform: translateY(-2px);
+  }
+}
+/* ===== О МАСТЕРЕ ===== */
+.about-master__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.about-master__list {
+  margin-top: 1.5rem;
+}
+.about-master__list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(212,175,55,0.1);
+  font-size: 1.05rem;
+}
+.about-master__list i {
+  width: 1.8rem;
+  color: var(--gold);
+  font-size: 1.3rem;
+  text-align: center;
+}
+.about-master__image {
+  display: flex;
+  justify-content: center;
+}
+.about-icon {
+  max-width: 320px;
+  height: auto;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.05));
+}
+
+/* ===== ОТЗЫВЫ ===== */
+.testimonials__rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.rating__stars {
+  color: var(--gold);
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+}
+.rating__value {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--black);
+}
+.rating__count {
+  color: var(--gray);
+  font-size: 1rem;
+}
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+.testimonial {
+  background: var(--white);
+  padding: 2rem 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(212,175,55,0.1);
+}
+.testimonial blockquote {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--gray-dark);
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.testimonial blockquote::before {
+  content: '“';
+  font-size: 2.5rem;
+  color: var(--gold);
+  opacity: 0.25;
+  position: absolute;
+  left: -0.5rem;
+  top: -0.3rem;
+}
+.testimonial figcaption {
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+/* ===== АДАПТИВ ДЛЯ НОВЫХ БЛОКОВ ===== */
+@media (max-width: 1024px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .about-master__container,
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+  .about-master__image {
+    order: -1;
+  }
+  .about-icon {
+    max-width: 240px;
+  }
+  .rating__value {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
