@@ -15,6 +15,24 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <script>
+  (function() {
+    document.body.classList.add('hero-focus');
+    const style = document.createElement('style');
+    style.textContent = `
+      .hero-focus .about-master,
+      .hero-focus .features,
+      .hero-focus .services-preview,
+      .hero-focus .portfolio-preview,
+      .hero-focus .testimonials,
+      .hero-focus .contact-cta {
+        opacity: 0 !important;
+        transform: translateY(20px) !important;
+      }
+    `;
+    document.head.appendChild(style);
+  })();
+</script>
   <header class="header">
     <div class="container header__container">
       <a href="index.html" class="logo" aria-label="На главную">Оксана Григорьева</a>

@@ -836,3 +836,56 @@ body {
   max-width: 600px;
   margin-inline: auto;
 }
+/* ===== ЭФФЕКТ "HERO В ФОКУСЕ" (ГАРАНТИРОВАННОЕ СКРЫТИЕ) ===== */
+
+/* Жёстко скрываем все секции, кроме hero и хедера/футера */
+body:not(.no-hero-focus) .about-master,
+body:not(.no-hero-focus) .features,
+body:not(.no-hero-focus) .services-preview,
+body:not(.no-hero-focus) .portfolio-preview,
+body:not(.no-hero-focus) .testimonials,
+body:not(.no-hero-focus) .contact-cta {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: opacity 0.6s cubic-bezier(0.2, 0.0, 0.0, 1),
+              transform 0.6s cubic-bezier(0.2, 0.0, 0.0, 1);
+  will-change: opacity, transform;
+}
+
+/* Класс visible снимает скрытие */
+body:not(.no-hero-focus) .about-master.visible,
+body:not(.no-hero-focus) .features.visible,
+body:not(.no-hero-focus) .services-preview.visible,
+body:not(.no-hero-focus) .portfolio-preview.visible,
+body:not(.no-hero-focus) .testimonials.visible,
+body:not(.no-hero-focus) .contact-cta.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Для браузеров с поддержкой animation-timeline */
+@supports (animation-timeline: view()) {
+  body:not(.no-hero-focus) .about-master,
+  body:not(.no-hero-focus) .features,
+  body:not(.no-hero-focus) .services-preview,
+  body:not(.no-hero-focus) .portfolio-preview,
+  body:not(.no-hero-focus) .testimonials,
+  body:not(.no-hero-focus) .contact-cta {
+    opacity: 1 !important; /* анимация управляет прозрачностью */
+    transform: translateY(0) !important;
+    animation: reveal 0.7s linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 15%;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

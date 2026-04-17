@@ -1,11 +1,14 @@
 /**
- * Минималистичный, но мощный скрипт для карусели и мобильного меню
- * Использует Pointer Events для свайпов, доступен и лёгок.
+ * main.js — весь интерактив сайта:
+ * - Мобильное меню (бургер)
+ * - Карусель портфолио (свайпы, точки, ресайз)
+ * - Плавное появление секций при скролле (Intersection Observer)
  */
+
 (function() {
   'use strict';
 
-  // --- Мобильное меню ---
+  // ---------- МОБИЛЬНОЕ МЕНЮ ----------
   const initMobileMenu = () => {
     const toggle = document.querySelector('.mobile-toggle');
     const nav = document.querySelector('.nav');
@@ -42,7 +45,7 @@
     });
   };
 
-  // --- Карусель ---
+  // ---------- КАРУСЕЛЬ ПОРТФОЛИО ----------
   class Carousel {
     constructor(element) {
       this.root = element;
@@ -109,7 +112,6 @@
     }
 
     update() {
-      // Обновление состояния кнопок
       if (this.prevBtn) {
         this.prevBtn.disabled = this.currentIndex === 0;
       }
@@ -117,14 +119,12 @@
         this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
       }
 
-      // Обновление точек
       this.dots.forEach((dot, idx) => {
         dot.classList.toggle('active', idx === this.currentIndex);
       });
     }
 
     bindEvents() {
-      // Кнопки
       if (this.nextBtn) this.nextBtn.addEventListener('click', () => this.next());
       if (this.prevBtn) this.prevBtn.addEventListener('click', () => this.prev());
 
@@ -136,7 +136,6 @@
           const newSlidesPerView = this.getSlidesPerView();
           if (newSlidesPerView !== this.slidesPerView) {
             this.slidesPerView = newSlidesPerView;
-            // Пересоздаём точки
             this.dotsContainer.innerHTML = '';
             this.init();
           }
@@ -194,10 +193,30 @@
     }
   }
 
-  // Инициализация карусели
+  // ---------- ПЛАВНОЕ ПОЯВЛЕНИЕ СЕКЦИЙ (Intersection Observer) ----------
+  const initRevealSections = () => {
+    // Если браузер поддерживает animation-timeline, нативный эффект уже работает — JS не нужен
+    if (window.CSS && CSS.supports('animation-timeline', 'view()')) return;
+
+    const sections = document.querySelectorAll('.about-master, .features, .services-preview, .portfolio-preview, .testimonials, .contact-cta');
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // достаточно один раз
+        }
+      });
+    }, { threshold: 0.15 });
+
+    sections.forEach(section => observer.observe(section));
+  };
+
+  // ---------- ЗАПУСК ВСЕГО ----------
   const carouselElement = document.querySelector('[data-carousel]');
   if (carouselElement) new Carousel(carouselElement);
 
-  // Инициализация меню
   initMobileMenu();
+  initRevealSections();
 })();
