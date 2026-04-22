@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оксана Григорьева · Ресницы и брови · Апатиты</title>
+  
+  <!-- Шрифты и иконки -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Основные стили -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="logo" aria-label="На главную">Оксана Григорьева</a>
+      
+      <nav class="nav" aria-label="Основное меню">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link active" aria-current="page">Главная</a></li>
+          <li><a href="services.html" class="nav__link">Услуги</a></li>
+          <li><a href="price.html" class="nav__link">Прайс</a></li>
+          <li><a href="portfolio.html" class="nav__link">Портфолио</a></li>
+          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header__contact">
+        <a href="tel:+79211695704" class="header__phone">+7 (921) 169-57-04</a>
+        <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" 
+           class="btn btn--gold btn--small" target="_blank" rel="noopener">Записаться</a>
+      </div>
+      
+      <button class="mobile-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Главный экран">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">Взгляд, который <br>говорит за тебя</h1>
+          <p class="hero__subtitle">Наращивание и ламинирование ресниц, ламинирование бровей<br>в центре Апатитов</p>
+          <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" 
+             class="btn btn--gold btn--large" target="_blank" rel="noopener">Записаться онлайн</a>
+        </div>
+        <div class="hero__image">
+          <img src="images/hero/master-icon.svg" alt="Оксана Григорьева — мастер по ресницам и бровям" class="hero-icon">
+        </div>
+      </div>
+    </section>
+
+    <!-- О мастере -->
+    <section class="about-master section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section-title">О мастере</h2>
+        <ul class="about-master__list about-master__list--centered">
+          <li><i class="fas fa-graduation-cap"></i> Выпускница международной школы «PRO Взгляд» (СПб, 2024)</li>
+          <li><i class="fas fa-clock"></i> Опыт работы 1–3 года</li>
+          <li><i class="fas fa-star"></i> Рейтинг 4.9 на основе 41 отзыва на Avito</li>
+          <li><i class="fas fa-map-pin"></i> Собственная уютная студия в центре Апатитов</li>
+          <li><i class="fas fa-shield-alt"></i> Полная стерилизация инструментов</li>
+          <li><i class="fas fa-leaf"></i> Гипоаллергенные материалы премиум‑класса</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features section" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title" class="section-title">Почему выбирают меня</h2>
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-star"></i></div>
+            <h3>Премиум‑материалы</h3>
+            <p>Использую только гипоаллергенные материалы и лучшие бренды</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-clock"></i></div>
+            <h3>Долговременный эффект</h3>
+            <p>Наращивание держится до 4 недель, ламинирование — до 2 месяцев</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-couch"></i></div>
+            <h3>Уютная студия</h3>
+            <p>Комфортное кресло, приятная музыка, центр города</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>Удобная запись</h3>
+            <p>Онлайн‑запись на Avito за пару кликов</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги (кратко) -->
+    <section class="services-preview section bg-light" aria-labelledby="services-preview-title">
+      <div class="container">
+        <h2 id="services-preview-title" class="section-title">Мои услуги</h2>
+        <div class="services-preview__grid">
+          <article class="service-card">
+            <h3>Наращивание ресниц</h3>
+            <p>Классика, 1.5D, 2D, 3D — подберём эффект под ваш образ</p>
+            <a href="services.html" class="link-arrow">Подробнее <i class="fas fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card">
+            <h3>Ламинирование ресниц</h3>
+            <p>Питание, изгиб и насыщенный цвет без туши</p>
+            <a href="services.html" class="link-arrow">Подробнее <i class="fas fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card">
+            <h3>Ламинирование бровей</h3>
+            <p>Укладка и фиксация непослушных волосков, долговременный результат</p>
+            <a href="services.html" class="link-arrow">Подробнее <i class="fas fa-arrow-right"></i></a>
+          </article>
+        </div>
+        <div class="text-center">
+          <a href="price.html" class="btn btn--outline">Смотреть прайс</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Портфолио (карусель) -->
+    <section class="portfolio-preview section" aria-labelledby="portfolio-title">
+      <div class="container">
+        <h2 id="portfolio-title" class="section-title">Последние работы</h2>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport">
+            <div class="carousel__track" data-carousel-track>
+              <div class="carousel__slide"><img src="images/portfolio/classic1.jpg" alt="Классическое наращивание" loading="lazy"></div>
+              <div class="carousel__slide"><img src="images/portfolio/volume1.5d.jpg" alt="1.5D объем" loading="lazy"></div>
+              <div class="carousel__slide"><img src="images/portfolio/volume2d.jpg" alt="2D объем" loading="lazy"></div>
+              <div class="carousel__slide"><img src="images/portfolio/volume3d.jpg" alt="3D эффект" loading="lazy"></div>
+              <div class="carousel__slide"><img src="images/portfolio/lam-res.jpg" alt="Ламинирование ресниц" loading="lazy"></div>
+              <div class="carousel__slide"><img src="images/portfolio/lam-brow.jpg" alt="Ламинирование бровей" loading="lazy"></div>
+            </div>
+          </div>
+
+          <button class="carousel__btn carousel__btn--prev" data-carousel-prev aria-label="Предыдущий слайд">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel__btn carousel__btn--next" data-carousel-next aria-label="Следующий слайд">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <div class="carousel__dots" data-carousel-dots></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="testimonials section bg-light" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title" class="section-title">Отзывы клиентов</h2>
+        <div class="testimonials__rating">
+          <span class="rating__stars">★★★★★</span>
+          <span class="rating__value">4.9</span>
+          <span class="rating__count">на основе 41 отзыва на Avito</span>
+        </div>
+        <div class="testimonials__grid">
+          <figure class="testimonial">
+            <blockquote>«Оксана — настоящий профессионал! Ресницы держатся месяц, выглядят очень естественно. Очень аккуратная работа, приятная атмосфера в студии.»</blockquote>
+            <figcaption>— Анна</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote>«Делала ламинирование ресниц и бровей. Эффект потрясающий! Теперь каждое утро просыпаюсь уже красивая. Спасибо огромное!»</blockquote>
+            <figcaption>— Екатерина</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote>«Хожу только к Оксане уже полгода. Очень довольна качеством и сервисом. Рекомендую!»</blockquote>
+            <figcaption>— Марина</figcaption>
+          </figure>
+        </div>
+        <div class="text-center">
+          <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695#reviews" 
+             class="btn btn--outline" target="_blank" rel="noopener">Читать все отзывы на Avito</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты (кратко) + CTA -->
+    <section class="contact-cta section bg-light" aria-labelledby="contact-cta-title">
+      <div class="container contact-cta__container">
+        <div class="contact-cta__info">
+          <h2 id="contact-cta-title" class="section-title">Жду вас в студии</h2>
+          <address class="contact-details">
+            <p><i class="fas fa-map-pin"></i> ул. Дзержинского, д. 35, офис 406, Апатиты</p>
+            <p><i class="fas fa-phone-alt"></i> <a href="tel:+79211695704">+7 (921) 169-57-04</a></p>
+            <p><i class="fab fa-telegram"></i> <a href="https://t.me/grigosha2607" target="_blank" rel="noopener">Telegram</a></p>
+            <p><i class="fab fa-vk"></i> <a href="https://vk.com/grigosha2607" target="_blank" rel="noopener">ВКонтакте</a></p>
+            <p><i class="fas fa-store"></i> <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" target="_blank" rel="noopener">Профиль на Avito</a></p>
+          </address>
+          <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" 
+             class="btn btn--gold" target="_blank" rel="noopener">Записаться на Avito</a>
+        </div>
+        <div class="contact-cta__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=33.396363%2C67.564368&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzUwMDAwMDAwEgjQoNC%2B0YHRgdC40Y8iCg2a%2FRNCFdN4Qg%3D%3D&z=18" 
+                  width="100%" height="400" allowfullscreen 
+                  title="Карта с адресом студии" style="border-radius: 12px;"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__legal">
+        <p>© 2025 Оксана Григорьева. Все права защищены.</p>
+        <p class="footer__inn">Самозанятая Григорьева Оксана Павловна<br>ИНН 510101213118</p>
+        <p><a href="privacy.html" class="footer__privacy-link">Политика конфиденциальности</a></p>
+      </div>
+      <div class="footer__links">
+        <a href="https://t.me/grigosha2607" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://vk.com/grigosha2607" target="_blank" rel="noopener"><i class="fab fa-vk"></i> ВКонтакте</a>
+        <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" target="_blank" rel="noopener"><i class="fas fa-store"></i> Avito</a>
+        <a href="tel:+79211695704"><i class="fas fa-phone-alt"></i> Позвонить</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Скрипт для карусели и мобильного меню -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* ===== СТРАНИЦА КОНТАКТЫ ===== */
+.contacts {
+  background: transparent !important;
+}
+.contacts__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.contact-info {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+.contact-info address {
+  margin-block: 2rem;
+  font-style: normal;
+  background: transparent;
+}
+.contact-info address p {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  margin-bottom: 1.2rem !important;
+}
+/* Иконки */
+.contact-info address p i,
+.contact-info i {
+  width: 1.8rem;
+  color: var(--gold);
+  font-size: 1.3rem;
+  text-align: center;
+}
+.contact-map iframe {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(212,175,55,0.15);
+  width: 100%;
+  height: 400px;
+}

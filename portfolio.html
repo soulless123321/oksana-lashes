@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио · Оксана Григорьева</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="logo" aria-label="На главную">Оксана Григорьева</a>
+      <nav class="nav" aria-label="Основное меню">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="services.html" class="nav__link">Услуги</a></li>
+          <li><a href="price.html" class="nav__link">Прайс</a></li>
+          <li><a href="portfolio.html" class="nav__link active" aria-current="page">Портфолио</a></li>
+          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__contact">
+        <a href="tel:+79211695704" class="header__phone">+7 (921) 169-57-04</a>
+        <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695"
+           class="btn btn--gold btn--small" target="_blank" rel="noopener">Записаться</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header section" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title" class="page-title">Портфолио</h1>
+        <p class="page-subtitle">Примеры моих работ</p>
+      </div>
+    </section>
+
+    <section class="portfolio-gallery section">
+      <div class="container">
+        <div class="gallery-grid">
+          <article class="gallery-item"><img src="images/portfolio/classic1.jpg" alt="Классика" loading="lazy"></article>
+          <article class="gallery-item"><img src="images/portfolio/volume1.5d.jpg" alt="1.5D" loading="lazy"></article>
+          <article class="gallery-item"><img src="images/portfolio/volume2d.jpg" alt="2D объем" loading="lazy"></article>
+          <article class="gallery-item"><img src="images/portfolio/volume3d.jpg" alt="3D эффект" loading="lazy"></article>
+          <article class="gallery-item"><img src="images/portfolio/lam-res.jpg" alt="Ламинирование ресниц" loading="lazy"></article>
+          <article class="gallery-item"><img src="images/portfolio/lam-brow.jpg" alt="Ламинирование бровей" loading="lazy"></article>
+        </div>
+        <div class="text-center">
+          <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695"
+             class="btn btn--gold" target="_blank" rel="noopener">Хочу так же</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__legal">
+        <p>© 2025 Оксана Григорьева. Все права защищены.</p>
+        <p class="footer__inn">Самозанятая Григорьева Оксана Павловна<br>ИНН 510101213118</p>
+        <p><a href="privacy.html" class="footer__privacy-link">Политика конфиденциальности</a></p>
+      </div>
+      <div class="footer__links">
+        <a href="https://t.me/grigosha2607" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://vk.com/grigosha2607" target="_blank" rel="noopener"><i class="fab fa-vk"></i> ВКонтакте</a>
+        <a href="https://www.avito.ru/apatity/predlozheniya_uslug/naraschivanie_resnits_laminirovanie_resnits_i_brovey_4321385695" target="_blank" rel="noopener"><i class="fas fa-store"></i> Avito</a>
+        <a href="tel:+79211695704"><i class="fas fa-phone-alt"></i> Позвонить</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const toggle = document.querySelector('.mobile-toggle');
+      const nav = document.querySelector('.nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
+          this.setAttribute('aria-expanded', expanded);
+          nav.classList.toggle('active');
+        });
+      }
+    })();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
