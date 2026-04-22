@@ -23,3 +23,11 @@
   transition: transform 0.4s ease;
 }
 .gallery-item:hover img { transform: scale(1.05); }
+/* Уменьшаем отступы на странице портфолио */
+.page-header {
+  padding-bottom: 1rem !important;
+}
+
+.portfolio-gallery {
+  padding-top: 0.5rem !important;
+}

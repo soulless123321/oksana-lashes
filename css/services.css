@@ -54,3 +54,25 @@
   color: var(--gold);
   margin-right: 6px;
 }
+/* Уменьшаем отступы на странице услуг */
+.page-header {
+  padding-bottom: 1rem !important;
+}
+
+.services-detail {
+  padding-top: 0.5rem !important;
+}
+
+.services-detail__grid {
+  margin-bottom: 1rem;
+}
+
+/* Если нужно ещё компактнее, можно уменьшить отступы у карточек */
+.service-block {
+  padding: 2rem 2rem;
+}
+
+/* Отступ перед кнопкой "Посмотреть цены" */
+.text-center {
+  margin-top: 1.5rem !important;
+}

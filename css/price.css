@@ -42,3 +42,11 @@
   color: var(--gold);
   margin-right: 6px;
 }
+/* Уменьшаем отступы на странице прайса */
+.page-header {
+  padding-bottom: 1rem !important;
+}
+
+.price-table {
+  padding-top: 0.5rem !important;
+}
