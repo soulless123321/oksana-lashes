@@ -753,16 +753,19 @@ ul, ol { list-style: none; }
   }
 }
 
-/* ===== АДАПТИВНОСТЬ ===== */
+/* ===== АДАПТИВНОСТЬ (ОПТИМИЗИРОВАННАЯ) ===== */
 @media (max-width: 1024px) {
+  .hero__title { font-size: 2.8rem; }
   .features__grid { grid-template-columns: repeat(2, 1fr); }
   .services-preview__grid { grid-template-columns: repeat(2, 1fr); }
   .services-detail__grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials__grid { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
   :root { --container-padding: 1rem; }
+
   .header__container { flex-wrap: wrap; }
   .nav {
     display: none;
@@ -778,27 +781,31 @@ ul, ol { list-style: none; }
   .nav__list { flex-direction: column; align-items: center; gap: 1rem; }
   .header__contact { display: none; }
   .mobile-toggle { display: block; }
+
   .hero__container { flex-direction: column; text-align: center; }
-  .hero-icon { max-width: 320px; }
+  .hero__title { font-size: 2.5rem; }
+  .hero-icon { max-width: 320px; margin: 0 auto; }
+
   .features__grid,
   .services-preview__grid,
   .services-detail__grid,
   .testimonials__grid,
   .contact-cta__container,
   .contacts__grid { grid-template-columns: 1fr; }
+
   .carousel__btn--prev { left: 0; }
   .carousel__btn--next { right: 0; }
+
   .footer__container { flex-direction: column; text-align: center; }
   .footer__links { justify-content: center; }
 }
+
 @media (max-width: 480px) {
-  .btn--large { padding: 0.9em 2em; }
+  .btn--large { padding: 0.8em 1.8em; font-size: 0.9rem; }
+  .hero__title { font-size: 2.2rem; }
   .testimonials__grid { grid-template-columns: 1fr; }
   .price-table__content th,
-  .price-table__content td {
-    padding: 0.8rem 1rem;
-    font-size: 0.85rem;
-  }
+  .price-table__content td { padding: 0.8rem 0.8rem; font-size: 0.8rem; }
 }
 /* ===== ИСПРАВЛЕНИЯ: ЦЕНТРИРОВАНИЕ ЗАГОЛОВКОВ И ПРОЗРАЧНЫЕ КОНТАКТЫ ===== */
 
