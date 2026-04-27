@@ -852,60 +852,75 @@ ul, ol { list-style: none; }
   margin-bottom: 1.5rem;
 }
 @media (max-width: 480px) {
-  /* Уменьшаем вертикальный ритм секций */
+  /* Сбрасываем лишние отступы у секций */
   .section {
-    padding-block: 2rem;
+    padding-block: 1.8rem;
   }
 
-  /* Сетки – уменьшаем зазоры */
+  /* Сетки превращаем в одну колонку и уменьшаем зазоры */
   .features__grid,
   .services-preview__grid,
-  .testimonials__grid {
-    gap: 1rem;
+  .services-detail__grid,
+  .testimonials__grid,
+  .contact-cta__container,
+  .contacts__grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
-  /* Карточки – делаем компактнее */
+  /* Карточки делаем компактнее, но сохраняем читаемость */
   .feature-card,
   .service-card,
-  .testimonial,
-  .card {
-    padding: 1.5rem 1rem;
+  .testimonial {
+    padding: 1.5rem 1.2rem;
+    margin: 0;
   }
 
   /* Заголовки в карточках */
   .feature-card h3,
   .service-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
   }
 
-  /* Описание в карточках */
+  /* Подзаголовки и тексты */
   .feature-card p,
   .service-card p {
-    font-size: 0.85rem;
-  }
-
-  /* Иконки чуть меньше */
-  .feature-card__icon {
-    font-size: 2.2rem;
-    margin-bottom: 0.8rem;
-  }
-
-  /* Карусель – убираем лишние отступы по бокам */
-  .carousel {
-    max-width: 100%;
-    --slide-gap: 0.5rem;
-  }
-
-  /* Кнопки – чуть компактнее */
-  .btn--large {
-    padding: 0.8em 1.8em;
     font-size: 0.9rem;
+    line-height: 1.4;
   }
 
-  /* Контактная секция */
+  /* Иконки преимуществ */
+  .feature-card__icon {
+    font-size: 2.3rem;
+    margin-bottom: 0.7rem;
+  }
+
+  /* Карусель: растягиваем на всю ширину, уменьшаем стрелки */
+  .carousel {
+    --slide-gap: 0.3rem;
+    max-width: 100%;
+  }
+  .carousel__btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .carousel__btn--prev { left: 2px; }
+  .carousel__btn--next { right: 2px; }
+
+  /* Секция "Жду вас в студии" */
   .contact-cta__container {
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+  .contact-cta__info {
+    padding: 0;
+  }
+
+  /* Заголовки секций чуть меньше */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
   }
 
   /* Подвал */
@@ -913,10 +928,16 @@ ul, ol { list-style: none; }
     padding-block: 1.5rem;
   }
 
+  /* Кнопки */
+  .btn--large {
+    padding: 0.7em 1.5em;
+    font-size: 0.85rem;
+  }
+
   /* Таблица прайса (если есть) */
   .price-table__content th,
   .price-table__content td {
-    padding: 0.7rem 0.6rem;
+    padding: 0.6rem 0.6rem;
     font-size: 0.75rem;
   }
 }
